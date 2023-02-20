@@ -1,1 +1,41 @@
+<html>
+    <head>
+        <title>Is It Chewsday</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <style>
+            @media (prefers-color-scheme: dark) {
+                body {
+                    font-family: Arial, Helvetica, sans-serif;
+                    background-color: #282828;
+                    color: #ebdbb2;
+                    margin: 0;
+                }
+            }
+            @media (prefers-color-scheme: light) {
+                body {
+                    font-family: Arial, Helvetica, sans-serif;
+                    background-color: #fbf1c7;
+                    color: #3c3836;
+                    margin: 0;
+                }
+            }
+        </style>
+        <script>
+            window.onload = () => {
+                const date = new Date();
+                
+                let output = document.getElementById("answer");
+                let day = date.getDay();
+                if (day === 2) {
+                    output.innerHTML = "<h1>Yes</h1>"
+                } else {
+                    output.innerHTML = "<h1>No</h1>"
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="answer" />
+    </body>
+</html>
